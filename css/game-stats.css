@@ -1,0 +1,40 @@
+#generationTime {
+    font-weight: bold;
+}
+
+.game-stats {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: #6f6f6fed;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-stats__title {
+    font-size: 20px;
+    color: #333;
+}
+
+.game-stats__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-stats__item {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.game-stats__item--live-cells {
+    color: #27ae60;
+}
+
+.game-stats__item--dead-cells {
+    color: #e74c3c;
+}

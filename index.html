@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game-table.css">
+    <link rel="stylesheet" href="css/game-btn.css">
+    <link rel="stylesheet" href="css/game-params.css">
+    <link rel="stylesheet" href="css/game-stats.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/game-prompt.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Игра "Жизнь"</title>
+</head>
+<body>
+    
+    <div class="card w-50 mb-1 d-none game-start-block" >
+        <p>Добро пожаловать в игру под названием</p>
+        <h1>'Игра жизни'!</h1>
+        <p class="px-5 ">Здесь вы сможете создавать и наблюдать за эволюцией своего собственного мира.</p>
+        <p>Укажите размер совершенного мира!</p>
+        <div class="game-params mb-1">
+            <label class="game-params__label" for="rows">Количество строк </label>
+            <input type="number" class="game-params__input" id="rows" min="5" max="100" value="30">
+            <label class="game-params__label" for="cols">Количество столбцов:</label>
+            <input type="number" class="game-params__input" id="cols" min="5" max="100" value="30">
+        </div>
+        <p>Готовы начать?</p>
+        <div class="text-center">
+            <button class="btn btn-success " id="createField">Создать мир</button>
+        </div>
+
+    </div>
+
+    <div class="loader-wrapp d-none">
+
+        <div class="loader"></div>
+        <h2>Идет генерация мира !</h2>
+    </div>
+
+    <div class="game-stats d-none">
+        <h2 class="game-stats__title">Показатели поколения</h2>
+        <ul class="game-stats__list">
+            <li class="game-stats__item">Время генерации: <span id="generationTime">0</span></li>
+            <li class="game-stats__item">Количество клеток:</li>
+            <li class="game-stats__item game-stats__item--live-cells">Живые: <span id="liveCountСell">0</span></li>
+            <li class="game-stats__item game-stats__item--dead-cells">Мертвые: <span  id="deadCountСell">0</span></li>
+        </ul>
+
+        <div>
+            <button class="btn btn-danger" id="stopGame">Пауза</button>
+        </div>
+    </div>
+
+    <div class="game-wrapper d-none">
+        <div id="grid"></div>
+    </div>
+
+    <div class="card game-panel d-none">
+        <p class="game-prompt">Отметите живые клетки на поле при помощи мыши или позвольте это сделать за Вас, при помощи 
+            <button class="btn btn-warning" id="randomFilling">Генерации клеток</button>
+        </p>
+        <div class="game-init">
+            <button class="btn btn-success d-none" id="starGame">Запустить мир!</button>
+            <button class="btn btn-warning d-none" id="clearField">Очистить поля</button>
+        </div>
+    </div>
+    
+    <div class="card game-pause d-none">
+        <button class="btn btn-success " id="continionGame">Продолжить игру!</button>
+        <button class="btn btn-info " id="nextStep">Следующее поколение(1 шаг)</button>
+        <button class="btn btn-warning  " id="restartField">Перезапустить</button>
+        <button class="btn btn-info " id="newGame">Создать новый мир!</button>
+    </div>
+
+    <div id="modalGameOver" class="modal">
+        <div class="modal-content">
+            <div>
+                <h3>УПС!!!</h3>
+                <p>НАСТУПИЛ КОНЕЦ СВЕТА!!!</p>
+                <p>Все клетки погибли</p>
+                <div class="modal__btn-wrapp">
+                    <button class="btn btn-success " id="newGameCancel">Создать новый мир</button>
+                    <button class="btn btn-warning btn-restar-game" id="restarGameCancel">Перезапустить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

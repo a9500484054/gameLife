@@ -1,0 +1,42 @@
+
+.btn {
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info {
+    background-color: #2980b9;
+}
+.btn-info:hover {
+    background-color: #2980b9;
+}
+
+.btn-success  {
+    background-color: #27ae60;
+}
+
+.btn-success :hover {
+    background-color: #219652;
+}
+
+.btn-warning  {
+    background-color: #f39c12;
+}
+
+.btn-warning :hover {
+    background-color: #d78d0b;
+}
+
+.btn-danger  {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #d63a2f;
+}

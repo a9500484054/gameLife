@@ -1,0 +1,16 @@
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+}

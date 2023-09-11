@@ -1,0 +1,32 @@
+.game-params {
+    /* background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-params__label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.game-params__input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.game-params__input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
